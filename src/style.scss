@@ -33,6 +33,7 @@ nav {
   top: 0;
   z-index: 5;
   padding-block: 0.5rem;
+  backdrop-filter: blur(5px);
 
   ul {
     width: 90%;
@@ -284,6 +285,9 @@ footer {
 
         figure {
           order: 1;
+          &::before {
+            transform: rotate(5deg);
+          }
         }
       }
     }
