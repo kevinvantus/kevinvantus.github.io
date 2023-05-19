@@ -1,3 +1,6 @@
+@import "variables";
+@import "base";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +8,11 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
+  scroll-behavior: smooth;
 
   // color-scheme: light dark;
   // color: rgba(255, 255, 255, 0.87);
@@ -19,18 +23,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  --primary-color: #012323f2;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
 }
 
 nav {
   display: flex;
-  background-color: var(--primary-color);
+  background-color: $primary-color;
 
   ul {
     width: 90%;
@@ -38,7 +35,6 @@ nav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
 
     li {
       a {
@@ -52,17 +48,16 @@ nav {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: $primary-color;
   padding-block: 60px;
   text-align: center;
-
-  // padding-block: 100px;
-
+  font-family: $cursive-font; // padding-block: 100px;
   div {
     max-width: 17.36rem;
     margin: auto;
 
     figure {
+      width: 17.36rem;
       height: 17.36rem;
       border-radius: 50%;
       background-color: #c4c4c4;
@@ -92,6 +87,9 @@ header {
       img {
         display: block;
         width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
         max-width: 100%;
       }
     }
@@ -108,8 +106,43 @@ header {
       font-size: 1.5rem;
       text-transform: capitalize;
     }
+
+    [class*="icon"] {
+      font-size: 2rem;
+      color: #fff;
+    }
   }
 }
+
+/******************** About styles ********************/
+#about {
+  padding-block: $section-block-padding;
+
+  article {
+    margin-block-end: 1.25rem;
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  h3 {
+    margin-block-end: 1.25rem;
+  }
+
+  .period {
+    color: $gray;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .company {
+    margin-block: 0.5rem;
+    font-family: $cursive-font;
+  }
+
+  p {
+  }
+}
+/******************** About styles end ********************/
 // @media (prefers-color-scheme: light) {
 //   :root {
 //     color: #213547;
