@@ -28,6 +28,7 @@
 nav {
   display: flex;
   background-color: $primary-color;
+  border-bottom: 1px solid rgb(1 35 35 / 54%);
 
   ul {
     width: 90%;
@@ -35,13 +36,45 @@ nav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+  }
 
-    li {
-      a {
-        padding: 1rem;
-        display: block;
-        text-transform: capitalize;
-        color: #fff;
+  a {
+    padding: 1rem;
+    display: block;
+    text-transform: capitalize;
+    color: #fff;
+    transition: color 0.3s;
+    position: relative;
+
+    &.active {
+      color: #ffb800;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        display: inline;
+        width: 5px;
+        height: 5px;
+        background-color: #ffb800;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover {
+      color: #ffb800;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        display: inline;
+        width: 5px;
+        height: 5px;
+        background-color: #ffb800;
+        border-radius: 50%;
       }
     }
   }
@@ -52,6 +85,7 @@ header {
   padding-block: 60px;
   text-align: center;
   font-family: $cursive-font; // padding-block: 100px;
+
   div {
     max-width: 17.36rem;
     margin: auto;
@@ -143,6 +177,57 @@ header {
   }
 }
 /******************** About styles end ********************/
+
+/******************** Skills styles ********************/
+#skills {
+  background-color: $primary-color;
+  padding-block: $section-block-padding;
+  color: #fff;
+
+  h2 {
+    color: #fff;
+
+    &::after,
+    &::before {
+      background-color: #fff;
+    }
+  }
+}
+/******************** Skills styles end ********************/
+
+/******************** Project styles ********************/
+#projects {
+  color: $primary-color;
+  padding-block: $section-block-padding;
+
+  h2 {
+    color: $primary-color;
+
+    &::after,
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  article {
+    margin-block-end: 2rem;
+  }
+
+  figure {
+    height: 230px;
+    background-color: gray;
+    margin-block-end: 1rem;
+    border-radius: 6px;
+  }
+}
+/******************** Project styles end ********************/
+
+footer {
+  background-color: $primary-color;
+  color: #fff;
+  padding-block: 1.5rem;
+  text-align: center;
+}
 // @media (prefers-color-scheme: light) {
 //   :root {
 //     color: #213547;
@@ -155,3 +240,48 @@ header {
 //     background-color: #f9f9f9;
 //   }
 // }
+
+@media (min-width: 900px) {
+  nav {
+    ul {
+      gap: 1.5rem;
+    }
+  }
+
+  header {
+    padding-block: 85px;
+  }
+
+  #projects {
+    figure {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $primary-color;
+        transform: rotate(-5deg);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: inherit;
+      }
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      column-gap: 2rem;
+      align-items: center;
+
+      &:nth-of-type(even) {
+        grid-template-columns: 60% 40%;
+
+        figure {
+          order: 1;
+        }
+      }
+    }
+  }
+}
