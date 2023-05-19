@@ -29,6 +29,10 @@ nav {
   display: flex;
   background-color: $primary-color;
   border-bottom: 1px solid rgb(1 35 35 / 54%);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding-block: 0.5rem;
 
   ul {
     width: 90%;
