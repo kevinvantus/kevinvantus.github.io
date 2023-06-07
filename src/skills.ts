@@ -6,8 +6,8 @@ import Sass from "./assets/skills/sass.png";
 import Angular from "./assets/skills/angular.png";
 import React from "./assets/skills/react.png";
 import Node from "./assets/skills/nodejs.png";
-import Express from "./assets/skills/express.png";
-import MongoDB from "./assets/skills/mongodb.png";
+// import Express from "./assets/skills/express.png";
+// import MongoDB from "./assets/skills/mongodb.png";
 
 const skills = `
   <section class="light-bg" id="skills">
