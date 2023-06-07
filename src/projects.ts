@@ -48,7 +48,7 @@ const renderProjects = (projects: typeof projectsList) => {
           <img src=${project.image} alt=${project.title} />
         </figure>
         <div>
-          <h4 class="title"><a href=${project.link} target="_blank">${project.title}</a></h4>
+          <h4 class="title"><a href=${project.link} target="_blank">${project.title} <i class="icon-external-link"></i></a></h4>
         </div>
       </article>
     `;
