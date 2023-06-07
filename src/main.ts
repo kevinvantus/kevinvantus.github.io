@@ -13,5 +13,5 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     ${skills}
     ${projects}
   </main>
-  <footer>&copy; ${new Date().getFullYear()}</footer>
+  <footer>kevinvantus &copy; ${new Date().getFullYear()}</footer>
 `;

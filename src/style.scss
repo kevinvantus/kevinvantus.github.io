@@ -51,37 +51,37 @@ nav {
     transition: color 0.3s;
     position: relative;
 
-    &.active {
-      color: #ffb800;
+    // &.active {
+    //   color: #ffb800;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 15%;
-        left: 50%;
-        display: inline;
-        width: 5px;
-        height: 5px;
-        background-color: #ffb800;
-        border-radius: 50%;
-      }
-    }
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 15%;
+    //     left: 50%;
+    //     display: inline;
+    //     width: 5px;
+    //     height: 5px;
+    //     background-color: #ffb800;
+    //     border-radius: 50%;
+    //   }
+    // }
 
-    &:hover {
-      color: #ffb800;
+    // &:hover {
+    //   color: #ffb800;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 15%;
-        left: 50%;
-        display: inline;
-        width: 5px;
-        height: 5px;
-        background-color: #ffb800;
-        border-radius: 50%;
-      }
-    }
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 15%;
+    //     left: 50%;
+    //     display: inline;
+    //     width: 5px;
+    //     height: 5px;
+    //     background-color: #ffb800;
+    //     border-radius: 50%;
+    //   }
+    // }
   }
 }
 
@@ -207,6 +207,7 @@ header {
 
   h2 {
     color: $primary-color;
+    margin-block-end: 2rem;
 
     &::after,
     &::before {
@@ -219,10 +220,19 @@ header {
   }
 
   figure {
-    height: 230px;
-    background-color: gray;
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
     margin-block-end: 1rem;
-    border-radius: 6px;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 2px;
+    padding: 2rem 1rem 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 /******************** Project styles end ********************/
@@ -246,6 +256,21 @@ footer {
 //   }
 // }
 
+@media (min-width: 600px) {
+  #projects {
+    figure {
+      position: relative;
+      padding: 2rem 1rem 0;
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 2.5rem;
+    }
+  }
+}
+
 @media (min-width: 900px) {
   nav {
     ul {
@@ -259,37 +284,7 @@ footer {
 
   #projects {
     figure {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        background-color: $primary-color;
-        transform: rotate(-5deg);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        border-radius: inherit;
-      }
-    }
-
-    article {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      column-gap: 2rem;
-      align-items: center;
-
-      &:nth-of-type(even) {
-        grid-template-columns: 60% 40%;
-
-        figure {
-          order: 1;
-          &::before {
-            transform: rotate(5deg);
-          }
-        }
-      }
+      padding: 2rem 2rem 0;
     }
   }
 }
