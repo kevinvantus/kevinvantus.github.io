@@ -161,6 +161,10 @@ header {
     margin-block-end: 1.25rem;
     max-width: 70ch;
     margin-inline: auto;
+
+    p {
+      margin-block-end: 1.5rem;
+    }
   }
 
   h3 {
