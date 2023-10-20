@@ -1,9 +1,9 @@
-import LifestaliaAdmin from "./assets/projects/lifestalia-admin.png";
-import Lifestalia from "./assets/projects/lifestalia.png";
-import Aitechma from "./assets/projects/aitechma.png";
-import TymsBook from "./assets/projects/tymsbook.png";
-import AjoMoney from "./assets/projects/tymsmoney.png";
-import Bintin from "./assets/projects/bintin.png";
+import LifestaliaAdmin from "./assets/projects/lifestalia-admin.webp";
+import Lifestalia from "./assets/projects/lifestalia.webp";
+import Aitechma from "./assets/projects/aitechma.webp";
+import TymsBook from "./assets/projects/tymsbook.webp";
+import AjoMoney from "./assets/projects/ajomoney.webp";
+import Bintin from "./assets/projects/bintin.webp";
 import AjoMoneyWebsite from "./assets/projects/ajomoney-website.webp";
 import ElenasyLMS from "./assets/projects/elenasy-lms.webp";
 
