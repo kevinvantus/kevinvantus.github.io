@@ -2,37 +2,49 @@ import LifestaliaAdmin from "./assets/projects/lifestalia-admin.png";
 import Lifestalia from "./assets/projects/lifestalia.png";
 import Aitechma from "./assets/projects/aitechma.png";
 import TymsBook from "./assets/projects/tymsbook.png";
-import TymsMoney from "./assets/projects/tymsmoney.png";
+import AjoMoney from "./assets/projects/tymsmoney.png";
 import Bintin from "./assets/projects/bintin.png";
+import AjoMoneyWebsite from "./assets/projects/ajomoney-website.webp";
+import ElenasyLMS from "./assets/projects/elenasy-lms.webp";
 
 const projectsList = [
   {
-    title: "Tyms Money",
-    image: TymsMoney,
-    link: "https://ajo-customer-web-v2.web.app/",
+    title: "Elenasy LMS web app (Angular)",
+    image: ElenasyLMS,
+    link: "https://app.elenasy.com/",
   },
   {
-    title: "Lifestalia Admin Dashboard",
+    title: "AjoMoney web app (Angular)",
+    image: AjoMoney,
+    link: "https://app.ajo.money/",
+  },
+  {
+    title: "AjoMoney website (Next JS)",
+    image: AjoMoneyWebsite,
+    link: "https://www.ajo.money/",
+  },
+  {
+    title: "Lifestalia admin dashboard (Angular)",
     image: LifestaliaAdmin,
     link: "https://lifestalia-admin.web.app/",
   },
   {
-    title: "Lifestalia Website",
+    title: "Lifestalia website (Next JS)",
     image: Lifestalia,
     link: "https://www.lifestalia.com/",
   },
   {
-    title: "Aitechma Website",
+    title: "Aitechma website (Next JS)",
     image: Aitechma,
     link: "https://www.aitechma.com/",
   },
   {
-    title: "Tyms Book",
+    title: "TymsBook (Angular)",
     image: TymsBook,
-    link: "https://tymsbook-web.web.app/auth",
+    link: "https://app.tyms.io/",
   },
   {
-    title: "Bintin",
+    title: "Bintin (Angular)",
     image: Bintin,
     link: "https://bintin.io/",
   },
@@ -41,7 +53,7 @@ const projectsList = [
 const renderProjects = (projects: typeof projectsList) => {
   let articles = "";
 
-  projects.forEach((project) => {
+  projects.forEach(project => {
     articles += `
       <article>
         <figure>
